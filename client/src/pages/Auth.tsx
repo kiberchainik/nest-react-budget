@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, useState } from 'react'
-import LoginForm from '../components/Auth/LoginForm'
-import RegisterForm from '../components/Auth/RegisterForm'
+import LoginForm from '../components/Auth/LoginForm/LoginForm'
+import RegisterForm from '../components/Auth/RegisterForm/RegisterForm'
 
 type TLoginData = {
   email: string

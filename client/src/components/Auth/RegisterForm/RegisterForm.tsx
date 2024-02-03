@@ -1,8 +1,9 @@
 import { FC, FormEvent } from 'react'
-import { AuthService } from '../../services/auth.services'
+import { AuthService } from '../../../services/auth.services'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-import { TFormRegisterDataProps } from '../../types/types'
+import { TFormRegisterDataProps } from '../../../types/types'
+import styles from './register.module.scss'
 
 const RegisterForm:FC<TFormRegisterDataProps> = ({email, login, password, isAuth, setIsAuth, handleChangeRegisterData, setIsRegister, isRegister}) => {
   const registrationHandler = async (e:FormEvent<HTMLFormElement>) => {
@@ -26,8 +27,8 @@ const RegisterForm:FC<TFormRegisterDataProps> = ({email, login, password, isAuth
 
   return (
     <div>
-        <h3 className="mb-10 text-xl text-center">Регистрация</h3>
-        <form onSubmit={registrationHandler} className="flex flex-col mx-auto gap-5">
+        <h3 className={styles.titleForm}>Регистрация</h3>
+        <form onSubmit={registrationHandler} className={styles.authform}>
           <input type="text" name='email' onChange={handleChangeRegisterData} value={email} className='input' placeholder='Email' />
           <input type="text" name='login' onChange={handleChangeRegisterData} value={login} className='input' placeholder='Login' />
           <input type="password" name='password' onChange={handleChangeRegisterData} value={password} className='input' placeholder='Password' />
