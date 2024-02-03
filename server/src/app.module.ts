@@ -8,6 +8,7 @@ import { TransactionModule } from './transaction/transaction.module';
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoanModule } from './loan/loan.module';
+import { SavingsModule } from './savings/savings.module';
 
 @Module({
   imports: [
@@ -30,7 +31,7 @@ import { LoanModule } from './loan/loan.module';
         entities: [__dirname + '/**/*.entity{.js, .ts}']
       }),
       inject: [ConfigService]
-    })
+    }), SavingsModule
   ],
   controllers: [AppController],
   providers: [AppService],

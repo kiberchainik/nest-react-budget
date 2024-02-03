@@ -17,7 +17,7 @@ const Header:FC = () => {
     navigate('/')
   }
   return (
-    <header className='flex items-center justify-between bg-slate-700 p-4 shadow-md backdrop-blur-sm'>
+    <header className='sticky z-10 flex items-center justify-between bg-gradient-to-tl from-slate-700 to-slate-800 p-4 shadow-md backdrop-blur-sm'>
         <Link to='/'>
             <FaBtc size={20} />
         </Link>

@@ -9,6 +9,7 @@ export class AuthorGuard implements CanActivate {
         private readonly transactionService:TransactionService,
         private readonly categoryService:CategoryService
     ) {}
+    
     async canActivate(context: ExecutionContext): Promise<boolean> {
         const request = context.switchToHttp().getRequest()
         const {id, type} = request.params

@@ -1,5 +1,6 @@
 import { Category } from "src/category/entities/category.entity";
 import { Loan } from "src/loan/entities/loan.entity";
+import { Saving } from "src/savings/entities/saving.entity";
 import { Transaction } from "src/transaction/entities/transaction.entity";
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
@@ -28,6 +29,9 @@ export class User {
 
     @OneToMany(() => Loan, loan => loan.user, {onDelete: 'CASCADE'})
     loan: Loan[]
+
+    @OneToMany(() => Saving, saving => saving.user, {onDelete: 'CASCADE'})
+    saving: Saving[]
 
     @CreateDateColumn()
     createAt: Date

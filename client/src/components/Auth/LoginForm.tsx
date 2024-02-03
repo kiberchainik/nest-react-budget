@@ -15,7 +15,7 @@ const LoginForm:FC<TFormLoginDataProps> = ({email, password, handleChangeLoginDa
     try {
       e.preventDefault()
       const data = await AuthService.login(email, password)
-console.log(data.access_token)
+
       if(data) {
         setTokenToLS('token', data.access_token)
         dispatch(login(data))

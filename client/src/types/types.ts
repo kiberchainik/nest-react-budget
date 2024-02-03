@@ -46,6 +46,21 @@ export type TFormRegisterDataProps = TFormDataProps & {
     handleChangeRegisterData: (e:ChangeEvent<HTMLInputElement>) => void
 }
 
+export interface ILoan {
+    id: number
+    title: string
+    amount: number
+    type: string
+    createdAt: string
+    updatedAt:string
+}
+
+export interface IResponseLoanLoader {
+    dataLoan: ILoan[]
+    totalBorrow: number
+    totalLend: number
+}
+
 export interface ICategory {
     title:string
     id:number

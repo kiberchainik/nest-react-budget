@@ -11,6 +11,8 @@ import { categoriesAction } from "../actions/category.action";
 import { categoryLoader } from "../loaders/category.loader";
 import { transactionLoader } from "../loaders/transaction.loader";
 import { transactionAction } from "../actions/transaction.action";
+import { loanAction } from "../actions/loan.actions";
+import { loanLoader } from "../loaders/loan.loader";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +26,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'loan',
+                loader: loanLoader,
+                action: loanAction,
                 element: <ProtectedRoute><Loan /></ProtectedRoute>
             },
             {

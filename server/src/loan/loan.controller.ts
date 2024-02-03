@@ -7,6 +7,12 @@ import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 export class LoanController {
   constructor(private readonly loanService: LoanService) {}
 
+  @Get(':type')
+  @UseGuards(JwtAuthGuard)
+  findTotalByType(@Req() req, @Param('type') type:string) {
+    return this.loanService.findTotalByType(+req.user.id, type);
+  }
+
   @Post()
   @UsePipes(new ValidationPipe())
   @UseGuards(JwtAuthGuard)
