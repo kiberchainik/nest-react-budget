@@ -1,10 +1,10 @@
 export const formatDate = (data: string):string => {
-    const date = new Date(data)
+    const event = new Date(data);
     const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    }
+    month: 'long',
+    year: 'numeric',
+    day: 'numeric',
+    };
 
-    return date.toLocaleDateString('us-US', options)
+    return event.toLocaleDateString(undefined, options as any)
 }

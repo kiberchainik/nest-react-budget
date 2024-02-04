@@ -21,7 +21,7 @@ const Chart:FC<IChart> = ({totalIncome, totalExpense}) => {
   return (
     <PieChart width={240} height={240}>
         <Pie data={data} cx={'50%'} cy={'50%'} innerRadius={60} outerRadius={80} fill='#8884d8' paddingAngle={2} dataKey='value'>
-            {data.map((entry, index) => (
+            {data.map((_entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}></Cell>
             ))}
         </Pie>

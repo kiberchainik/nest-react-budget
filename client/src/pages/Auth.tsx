@@ -14,7 +14,7 @@ type TRegisterData = {
 }
 
 const Auth:FC = () => {
-  const [isAuth, setIsAuth] = useState<boolean>(false)
+  const [_isAuth, setIsAuth] = useState<boolean>(false)
   const [isRegister, setIsRegister] = useState<boolean>(true)
   const [loginData, setLoginData] = useState<TLoginData>({
     email: '', password: ''
