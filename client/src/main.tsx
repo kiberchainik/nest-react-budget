@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
+import './index.scss'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { store } from './store/store.ts'

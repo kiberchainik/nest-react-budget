@@ -1,24 +1,25 @@
 import { FC } from 'react'
 import { Form } from 'react-router-dom'
+import styles from './loan.module.scss'
 
 const FormLoan:FC = () => {
   return (
     <div className='rounded-md bg-slate-800 p-5'>
-        <Form className='grid gap-2' method='post' action='/loan'>
-            <label className='grid' htmlFor="title">
+        <Form className='flex flex-col gap-3' method='post' action='/loan'>
+            <label htmlFor="title" className={styles.inputFormLabel}>
                 <span>Название</span>
                 <input type="text" name="title" className="input" placeholder='Название ...' required />
             </label>
-            <label className='grid' htmlFor="amount">
+            <label htmlFor="amount" className={styles.inputFormLabel}>
                 <span>Сумма</span>
                 <input type="number" name="amount" className="input" placeholder='Сумма ...' required />
             </label>
-            <div className='flex gap-4 items-center'>
-                <label htmlFor="borrow" className="flex cursor-pointer items-center gap-2">
+            <div className={styles.radioBlock}>
+                <label htmlFor="borrow" className={styles.labelRadio}>
                     <input type="radio" name="type" id='borrow' value={"borrow"} className='form-radio text-blue-600' />
                     <span>Взял в долг</span>
                 </label>
-                <label htmlFor="lend" className="flex cursor-pointer items-center gap-2">
+                <label htmlFor="lend" className={styles.labelRadio}>
                     <input type="radio" name="type" id='lend' value={"lend"} className='form-radio text-blue-600' />
                     <span>Одолжил</span>
                 </label>

@@ -28,7 +28,7 @@ const RegisterForm:FC<TFormRegisterDataProps> = ({email, login, password, isAuth
   return (
     <div>
         <h3 className={styles.titleForm}>Регистрация</h3>
-        <form onSubmit={registrationHandler} className={styles.authform}>
+        <form onSubmit={registrationHandler} className={styles.authForm}>
           <input type="text" name='email' onChange={handleChangeRegisterData} value={email} className='input' placeholder='Email' />
           <input type="text" name='login' onChange={handleChangeRegisterData} value={login} className='input' placeholder='Login' />
           <input type="password" name='password' onChange={handleChangeRegisterData} value={password} className='input' placeholder='Password' />

@@ -44,7 +44,7 @@ const Table:FC = () => {
             marginPagesDisplayed={2}
             onPageChange={handlePageChange}
         />
-        <div className='bg-slate-800 px-4 py-3 mt-4 rounded-md'>
+        <div className='bg-slate-800 px-4 py-3 mt-4 rounded-md overflow-auto'>
             <table className='w-full'>
                 <thead>
                     <tr>

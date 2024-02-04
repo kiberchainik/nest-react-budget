@@ -1,0 +1,23 @@
+.transactionForm {
+    @apply flex flex-col gap-3
+}
+
+.radioBlock {
+    @apply flex flex-col xs:flex-row gap-4 items-start
+}
+
+.transactionStatistic {
+    @apply grid grid-cols-2 gap-3
+}
+
+.numExpense {
+    @apply rounded-sm mt-2 bg-red-600 p-1 text-center
+}
+
+.numIncome {
+    @apply rounded-sm mt-2 bg-green-600 p-1 text-center
+}
+
+.numTitle {
+    @apply text-center font-bold uppercase
+}

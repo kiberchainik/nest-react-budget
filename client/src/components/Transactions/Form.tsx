@@ -3,14 +3,15 @@ import { FaPlus } from 'react-icons/fa'
 import { Form, useLoaderData } from 'react-router-dom'
 import { IResponseTransactionLoader } from '../../types/types'
 import Modal from '../Modal/Modal'
+import styles from './transaction.module.scss'
 
 const TransactionForm:FC = () => {
   const {categories} = useLoaderData() as IResponseTransactionLoader
   const [isOpen, setIsOpen] = useState<boolean>(false)
   
   return (
-    <div className='rounded-md bg-slate-800 p-5'>
-        <Form className='grid gap-2' method='post' action='/transactions'>
+    <div className='rounded-md bg-slate-800 p-5 w-full'>
+        <Form className={styles.transactionForm} method='post' action='/transactions'>
             <label className='grid' htmlFor="title">
                 <span>Название</span>
                 <input type="text" name="title" className="input" placeholder='Название ...' required />
@@ -35,12 +36,12 @@ const TransactionForm:FC = () => {
             <button onClick={() => setIsOpen(true)} className='mt-2 flex max-w-fit items-center gap-2 text-white/50 hover:text-white'>
                 <FaPlus /> <span>Добавить категорию</span>
             </button>
-            <div className='flex gap-4 items-center'>
-                <label htmlFor="" className="flex cursor-pointer items-center gap-2">
-                    <input type="radio" name="type" value={"income"} className='form-radio text-blue-600' /> <span>Доход</span>
+            <div className={styles.radioBlock}>
+                <label htmlFor="income" className="flex cursor-pointer items-center gap-2">
+                    <input type="radio" id='income' name="type" value={"income"} className='form-radio text-blue-600' /> <span>Доход</span>
                 </label>
-                <label htmlFor="" className="flex cursor-pointer items-center gap-2">
-                    <input type="radio" name="type" value={"expense"} className='form-radio text-blue-600' /> <span>Расход</span>
+                <label htmlFor="expense" className="flex cursor-pointer items-center gap-2">
+                    <input type="radio" id='expense' name="type" value={"expense"} className='form-radio text-blue-600' /> <span>Расход</span>
                 </label>
             </div>
             <button className='btn btn-green mt-2 max-w-fit'>Добавить</button>

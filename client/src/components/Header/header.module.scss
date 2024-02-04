@@ -1,0 +1,15 @@
+.header {
+    @apply sticky z-10 flex items-center justify-between bg-gradient-to-tl from-slate-700 to-slate-800 p-4 shadow-md backdrop-blur-sm
+}
+
+.nav {
+    @apply max-lg:absolute max-lg:bg-slate-400 max-lg:top-16 max-lg:right-1 max-lg:max-w-60 max-lg:z-50 ml-auto mr-10  max-lg:rounded-md
+}
+
+.ul {
+    @apply flex max-lg:flex-col items-center gap-5 max-lg:w-[215px] max-lg:p-2
+}
+
+.li {
+    @apply max-lg:p-2
+}

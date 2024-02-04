@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Form } from 'react-router-dom'
+import styles from './modal.module.scss'
 
 interface IModal {
     type: 'post' | 'patch'
@@ -9,8 +10,8 @@ interface IModal {
 
 const Modal:FC<IModal> = ({type, id, setIsOpen}) => {
   return (
-    <div className='fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-black/50 flex justify-center items-center'>
-        <Form method={type} onSubmit={() => setIsOpen(false)} action='/categories' className='grid w-96 gap-2 rounded-3xl bg-slate-800 p-5'>
+    <div className={styles.modal}>
+        <Form method={type} onSubmit={() => setIsOpen(false)} action='/categories' className={styles.modalForm}>
             <label htmlFor="title">
                 <small>Название категории</small>
                 <input type="text" name="title" placeholder="Title ..." className='input w-full' />

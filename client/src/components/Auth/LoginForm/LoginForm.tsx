@@ -34,7 +34,7 @@ const LoginForm:FC<TFormLoginDataProps> = ({email, password, handleChangeLoginDa
   return (
     <div>
         <h3 className={styles.titleForm}>Вход</h3>
-        <form onSubmit={loginHandler} className={styles.authform}>
+        <form onSubmit={loginHandler} className={styles.authForm}>
           <input type="text" name='email' onChange={handleChangeLoginData} value={email} className='input' placeholder='Email' />
           <input type="password" name='password' onChange={handleChangeLoginData} value={password} className='input' placeholder='Password' />
           <button className='btn btn-green mx-auto'>Войти</button>

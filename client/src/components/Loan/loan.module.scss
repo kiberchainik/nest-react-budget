@@ -1,0 +1,27 @@
+.inputFormLabel {
+    @apply flex flex-col 
+}
+
+.radioBlock {
+    @apply flex flex-col xs:flex-row gap-4 items-start
+}
+
+.labelRadio {
+    @apply flex cursor-pointer items-center gap-2
+}
+
+.loanStatistic {
+    @apply bg-slate-800 px-4 py-3 mt-4 rounded-md
+}
+
+.numBorrow {
+    @apply rounded-sm mt-2 bg-red-600 p-1 text-center
+}
+
+.numLend {
+    @apply rounded-sm mt-2 bg-green-600 p-1 text-center
+}
+
+.numTitle {
+    @apply text-center font-bold uppercase
+}
