@@ -2,17 +2,16 @@ import { FC } from 'react'
 import { MdDeleteForever, MdModeEdit } from 'react-icons/md'
 import { Form } from 'react-router-dom'
 import { ICategory } from '../../types/types'
-import styles from './category.module.scss'
 
 type TCategoryItemProps = {
-    catId:number
+    catId?:number
     cat: ICategory
     setCatId:(val:number) => void
     setIsOpen:(val:boolean) => void
     setIsPatch:(val:boolean) => void
 }
 
-const CategoryItem:FC<TCategoryItemProps> = ({cat, catId, setCatId, setIsOpen, setIsPatch}) => {
+const CategoryItem:FC<TCategoryItemProps> = ({cat, setCatId, setIsOpen, setIsPatch}) => {
   return (
     <div className="group relative flex items-center gap-2 rounded-lg bg-slate-600 px-4 py-2">
         {cat.title}
